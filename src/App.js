@@ -29,7 +29,7 @@ function App() {
           continueMessage="Photo ready."
         />
         <TransitionSlide 
-          colorClasses={['bg-white dark:bg-black', 'bg-black', 'bg-green-500', 'bg-black']}
+          colorClasses={['bg-white dark:bg-black', 'bg-black', 'bg-green-500', 'bg-black', 'bg-green-500', 'bg-black']}
           settleTime={800}
           initialFlickerSpeed={25}
         />
@@ -41,7 +41,19 @@ function App() {
           endMessage="end of transmission"
         />
         <TransitionSlide 
-          colorClasses={['bg-black', 'bg-green-500', 'bg-white dark:bg-black']}
+          colorClasses={['bg-dark dark:bg-black', 'bg-black', 'bg-green-500', 'bg-black']}
+          settleTime={800}
+          initialFlickerSpeed={50}
+        />
+        <MatrixTerminalSlide 
+          careerTexts={terminalTexts}
+          terminalUser="sasa@virt-trade.savic.ba"
+          streamingMessage="streaming..."
+          readyMessage="ready"
+          endMessage="end of transmission"
+        />
+        <TransitionSlide 
+          colorClasses={['bg-black', 'bg-green-500', 'bg-white dark:bg-black', 'bg-green-500', 'bg-white dark:bg-black']}
           settleTime={800}
           initialFlickerSpeed={25}
         />
