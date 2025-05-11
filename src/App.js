@@ -9,11 +9,11 @@ function App() {
   // Album slide data
   return (
     <div className="
-           items-center justify-center flex flex-col 
-           min-h-screen font-serif
-           bg-white text-black 
-           dark:bg-black dark:text-white 
-         "
+      items-center justify-center flex flex-col 
+      min-h-screen font-serif
+      bg-white text-black 
+      dark:bg-black dark:text-white 
+    "
     >
       <SlideController>
         <h1 className="text-6xl m-12 overline decoration-double">Disclaimer</h1>
@@ -29,7 +29,8 @@ function App() {
           readyMessage="ready"
           endMessage="end of transmission"
         />
-        <h1>Thank you!</h1>
+        <h1 className="text-6xl underline">Thank you!</h1>
+        <h1 className="text-7xl">Q&A</h1>
       </SlideController>
     </div>
   );
