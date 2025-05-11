@@ -13,6 +13,7 @@ function App() {
          "
     >
       <SlideController>
+        <DisclaimerSlide/>
         <AlbumSlide/>
       </SlideController>
     </div>
