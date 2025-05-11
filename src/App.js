@@ -18,13 +18,18 @@ function App() {
     >
       <SlideController>
         <h1 className="text-6xl m-12 overline decoration-double">Disclaimer</h1>
+        <TransitionSlide 
+          colorClasses={['bg-white dark:bg-black', 'bg-white dark:bg-white']}
+          settleTime={800}
+          initialFlickerSpeed={25}
+        />
         <AlbumSlide 
           photos={albumPhotos}
           startMessage="Album ready."
           continueMessage="Photo ready."
         />
         <TransitionSlide 
-          colorClasses={['bg-white', 'bg-black', 'bg-green-500', 'bg-black']}
+          colorClasses={['bg-white dark:bg-black', 'bg-black', 'bg-green-500', 'bg-black']}
           settleTime={800}
           initialFlickerSpeed={25}
         />
