@@ -57,19 +57,31 @@ export default function TransitionSlide({
     return () => {
       timers.forEach(timer => clearTimeout(timer));
     };
-  }, [isFlickering, colorClasses, settleTime, initialFlickerSpeed]);
+  }, [isFlickering, colorClasses, settleTime, initialFlickerSpeed, goToNextSlide]);
   
   const handleClick = (e) => {
     e.stopPropagation(); // Prevent click from bubbling to SlideController
     
-    if (!isFlickering) {
-      goToNextSlide();
-    } else {
-      // If still flickering, immediately stop and settle on final color
+    // If still flickering, immediately stop and settle on final color
+    if (isFlickering) {
       setIsFlickering(false);
       setCurrentColorClass(colorClasses[colorClasses.length - 1]);
+    } else {
+      goToNextSlide();
     }
   };
+  
+  // Add a separate effect to handle the transition to next slide
+  useEffect(() => {
+    // When flickering stops, advance to the next slide after a delay
+    if (!isFlickering) {
+      const timer = setTimeout(() => {
+        goToNextSlide();
+      }, 500);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isFlickering, goToNextSlide]);
   
   // Combine the slide-content classes with the current color class
   const combinedClasses = `slide-content w-full h-full flex items-center justify-center transition-colors duration-75 ${currentColorClass}`;

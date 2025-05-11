@@ -41,7 +41,7 @@ function App() {
           endMessage="end of transmission"
         />
         <TransitionSlide 
-          colorClasses={['bg-black', 'bg-green-500', 'bg-white']}
+          colorClasses={['bg-black', 'bg-green-500', 'bg-white dark:bg-black']}
           settleTime={800}
           initialFlickerSpeed={25}
         />
