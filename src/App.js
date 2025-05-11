@@ -1,6 +1,7 @@
 import SlideController from './SlideController';
 import AlbumSlide from './slides/Album';
 import MatrixTerminalSlide from './slides/MatrixTerminal';
+import TransitionSlide from './slides/TransitionSlide';
 
 import { albumPhotos, terminalTexts } from './data';
 
@@ -22,6 +23,11 @@ function App() {
           startMessage="Album ready."
           continueMessage="Photo ready."
         />
+        <TransitionSlide 
+          colorClasses={['bg-white', 'bg-black', 'bg-green-500', 'bg-black']}
+          settleTime={800}
+          initialFlickerSpeed={25}
+        />
         <MatrixTerminalSlide 
           careerTexts={terminalTexts}
           terminalUser="sasa@portfolio.savic.ba"
@@ -29,8 +35,13 @@ function App() {
           readyMessage="ready"
           endMessage="end of transmission"
         />
-        <h1 className="text-6xl underline">Thank you!</h1>
-        <h1 className="text-7xl">Q&A</h1>
+        <TransitionSlide 
+          colorClasses={['bg-black', 'bg-green-500', 'bg-white']}
+          settleTime={800}
+          initialFlickerSpeed={25}
+        />
+        <h1 className="text-6xl underline">Thank You!</h1>
+        <h1 className="text-6xl">Questions?</h1>
       </SlideController>
     </div>
   );

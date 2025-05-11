@@ -10,4 +10,4 @@ test('renders learn react link', () => {
 
 test('imports correct slides at start', () => {
   render (<App />);
-}
+});
