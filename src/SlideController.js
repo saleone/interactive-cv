@@ -1,4 +1,12 @@
-import { Children, useState, useEffect } from 'react';
+import { Children, useState, useEffect, createContext } from 'react';
+
+// Create a context to share navigation functions with slides
+export const SlideContext = createContext({
+  goToNextSlide: () => {},
+  goToPrevSlide: () => {},
+  currentIndex: 0,
+  totalSlides: 0
+});
 
 export default function SlideController({children}) {
   const all_children = Children.toArray(children);
@@ -35,6 +43,11 @@ export default function SlideController({children}) {
   
   // Handle click navigation
   const handleClick = (e) => {
+    // Don't handle clicks if the event was already handled by a child component
+    if (e.target.closest('.slide-content')) {
+      return;
+    }
+    
     const { clientX, target } = e;
     const { width } = target.getBoundingClientRect();
     
@@ -45,15 +58,25 @@ export default function SlideController({children}) {
     }
   };
   
+  // Context value
+  const contextValue = {
+    goToNextSlide,
+    goToPrevSlide,
+    currentIndex,
+    totalSlides: all_children.length
+  };
+  
   return (
-    <div 
-      className="wrap w-screen h-screen cursor-pointer flex items-center justify-center" 
-      onClick={handleClick}
-    >
-      <div key={currentIndex} className="w-full h-full flex items-center justify-center">
-        {all_children[currentIndex]}
+    <SlideContext.Provider value={contextValue}>
+      <div 
+        className="wrap w-screen h-screen cursor-pointer flex items-center justify-center" 
+        onClick={handleClick}
+      >
+        <div key={currentIndex} className="w-full h-full flex items-center justify-center slide-content">
+          {all_children[currentIndex]}
+        </div>
       </div>
-    </div>
+    </SlideContext.Provider>
   );
 };
 
