@@ -91,7 +91,7 @@ export default function AlbumSlide() {
 
   return (
     <div 
-      className="relative w-full h-full flex items-center justify-center cursor-pointer slide-content"
+      className="bg-white relative w-full h-full flex items-center justify-center cursor-pointer slide-content"
       onClick={handleClick}
       ref={containerRef}
     >

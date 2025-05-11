@@ -17,7 +17,7 @@ const PolaroidPhoto = ({ imageUrl, caption, width = 264 * ImageScale }) => {
   
   return (
     <div 
-      className="relative bg-white dark:bg-black shadow-lg dark:shadow-white/20"
+      className="relative bg-white shadow-lg"
       style={{
         width: `${width}px`,
         height: `${height}px`,
@@ -26,7 +26,7 @@ const PolaroidPhoto = ({ imageUrl, caption, width = 264 * ImageScale }) => {
     >
       {/* Image container */}
       <div 
-        className="overflow-hidden bg-black dark:bg-white"
+        className="overflow-hidden bg-black"
         style={{
           width: `${imageSize}px`,
           height: `${imageSize}px`,
@@ -41,7 +41,7 @@ const PolaroidPhoto = ({ imageUrl, caption, width = 264 * ImageScale }) => {
       
       {/* Caption */}
       <div 
-        className="mt-4 text-center px-2 text-black dark:text-white"
+        className="mt-4 text-center px-2 text-black"
         style={{
           fontFamily: "'Dancing Script', cursive",
           fontWeight: "700",
