@@ -213,7 +213,7 @@ export default function MatrixTerminalSlide() {
             <div className="text-xs text-green-400">sasa@demo.savic.one</div>
           </div>
           
-          <div className="text-xl min-h-[6rem]">
+          <div className="text-xl min-h-[20rem]">
             {textState.displayedText}
             <span className={`inline-block w-3 h-5 bg-green-500 ml-1 ${textState.isTyping ? 'animate-pulse' : 'opacity-0'}`}></span>
           </div>
@@ -221,15 +221,15 @@ export default function MatrixTerminalSlide() {
           {/* Fixed height message area to prevent layout shifts */}
           <div className="h-8 mt-4 text-sm text-gray-400">
             {textState.isTyping && (
-              <span>Data stream in progress...</span>
+              <span>streaming...</span>
             )}
             
             {!textState.isTyping && !textState.isDone && (
-              <span>Press anywhere to continue...</span>
+              <span>ready</span>
             )}
             
             {textState.isDone && (
-              <span>End of transmission. Press anywhere to exit.</span>
+              <span>end of transmission</span>
             )}
           </div>
         </div>

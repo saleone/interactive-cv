@@ -23,43 +23,43 @@ export default function AlbumSlide() {
       id: 1,
       imageUrl: "https://picsum.photos/seed/nature/300/300",
       caption: "Summer vacation 2023",
-      width: 264,
+      width: 320,
     },
     {
       id: 2,
       imageUrl: "https://picsum.photos/seed/beach/300/300",
       caption: "Beach memories",
-      width: 220,
+      width: 440,
     },
     {
       id: 3,
       imageUrl: "https://picsum.photos/seed/mountain/300/300",
       caption: "Mountain trip",
-      width: 176,
+      width: 360,
     },
     {
       id: 4,
       imageUrl: "https://picsum.photos/seed/city/300/300",
       caption: "City exploration",
-      width: 240,
+      width: 480,
     },
     {
       id: 5,
       imageUrl: "https://picsum.photos/seed/sunset/300/300",
       caption: "Sunset at the lake",
-      width: 200,
+      width: 400,
     },
     {
       id: 6,
       imageUrl: "https://picsum.photos/seed/friends/300/300",
       caption: "Friends gathering",
-      width: 250,
+      width: 500,
     },
     {
       id: 7,
       imageUrl: "https://picsum.photos/seed/food/300/300",
       caption: "Delicious dinner",
-      width: 190,
+      width: 380,
     }
   ];
 

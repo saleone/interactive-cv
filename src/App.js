@@ -1,4 +1,3 @@
-import DisclaimerSlide from './slides/Disclaimer';
 import SlideController from './SlideController';
 import AlbumSlide from './slides/Album';
 import MatrixTerminalSlide from './slides/MatrixTerminal';
@@ -14,7 +13,7 @@ function App() {
          "
     >
       <SlideController>
-        <DisclaimerSlide/>
+        <h1 className="text-6xl m-12 overline decoration-double">Disclaimer</h1>
         <AlbumSlide/>
         <MatrixTerminalSlide/>
         <h1>Thank you!</h1>
