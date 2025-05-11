@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useContext } from 'react';
 import PolaroidPhoto from '../components/PolaroidPhoto';
 import { SlideContext } from '../SlideController';
 
-export default function AlbumSlide() {
+export default function AlbumSlide({ photos }) {
   const { goToNextSlide } = useContext(SlideContext);
   const [visiblePhotos, setVisiblePhotos] = useState([]);
   const [isComplete, setIsComplete] = useState(false);
@@ -16,52 +16,6 @@ export default function AlbumSlide() {
       yOffset: Math.random() * 60 - 30,  // -30 to +30 pixels
     };
   };
-  
-  // Photo data without positioning information
-  const photos = [
-    {
-      id: 1,
-      imageUrl: "https://picsum.photos/seed/nature/300/300",
-      caption: "Summer vacation 2023",
-      width: 320,
-    },
-    {
-      id: 2,
-      imageUrl: "https://picsum.photos/seed/beach/300/300",
-      caption: "Beach memories",
-      width: 440,
-    },
-    {
-      id: 3,
-      imageUrl: "https://picsum.photos/seed/mountain/300/300",
-      caption: "Mountain trip",
-      width: 360,
-    },
-    {
-      id: 4,
-      imageUrl: "https://picsum.photos/seed/city/300/300",
-      caption: "City exploration",
-      width: 480,
-    },
-    {
-      id: 5,
-      imageUrl: "https://picsum.photos/seed/sunset/300/300",
-      caption: "Sunset at the lake",
-      width: 400,
-    },
-    {
-      id: 6,
-      imageUrl: "https://picsum.photos/seed/friends/300/300",
-      caption: "Friends gathering",
-      width: 500,
-    },
-    {
-      id: 7,
-      imageUrl: "https://picsum.photos/seed/food/300/300",
-      caption: "Delicious dinner",
-      width: 380,
-    }
-  ];
 
   const handleClick = (e) => {
     e.stopPropagation(); // Prevent click from bubbling to SlideController
@@ -115,18 +69,6 @@ export default function AlbumSlide() {
           </div>
         ))}
       </div>
-      
-      {visiblePhotos.length === 0 && (
-        <div className="absolute text-center text-xl opacity-50">
-          Click to start the photo album
-        </div>
-      )}
-      
-      {isComplete && visiblePhotos.length === photos.length && (
-        <div className="absolute bottom-10 text-center text-xl opacity-50">
-          Click to continue
-        </div>
-      )}
     </div>
   );
 }

@@ -1,7 +1,13 @@
 import { useState, useEffect, useRef, useContext } from 'react';
 import { SlideContext } from '../SlideController';
 
-export default function MatrixTerminalSlide() {
+export default function MatrixTerminalSlide({ 
+  careerTexts, 
+  terminalUser = "sasa@demo.savic.one",
+  streamingMessage = "streaming...",
+  readyMessage = "ready",
+  endMessage = "end of transmission"
+}) {
   const { goToNextSlide } = useContext(SlideContext);
   const [textState, setTextState] = useState({
     currentIndex: 0,
@@ -11,16 +17,6 @@ export default function MatrixTerminalSlide() {
   });
   const [matrixChars, setMatrixChars] = useState([]);
   const containerRef = useRef(null);
-  
-  // Career highlights to display
-  const careerTexts = [
-    "Started coding at age 12 with BASIC on a Commodore 64.",
-    "Graduated with Computer Science degree in 2010.",
-    "First professional role: Junior Developer at TechCorp Inc.",
-    "Led development of cloud-based analytics platform in 2015.",
-    "Contributed to open source projects including React and Node.js.",
-    "Currently working as Senior Software Architect specializing in distributed systems."
-  ];
 
   // Matrix rain effect setup
   useEffect(() => {
@@ -210,7 +206,7 @@ export default function MatrixTerminalSlide() {
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="bg-black bg-opacity-70 p-8 rounded-lg border border-green-500 shadow-lg shadow-green-500/20 max-w-3xl w-3/4">
           <div className="flex items-center mb-4 border-b border-green-500 pb-2">
-            <div className="text-xs text-green-400">sasa@demo.savic.one</div>
+            <div className="text-xs text-green-400">{terminalUser}</div>
           </div>
           
           <div className="text-xl min-h-[20rem]">
@@ -221,15 +217,15 @@ export default function MatrixTerminalSlide() {
           {/* Fixed height message area to prevent layout shifts */}
           <div className="h-8 mt-4 text-sm text-gray-400">
             {textState.isTyping && (
-              <span>streaming...</span>
+              <span>{streamingMessage}</span>
             )}
             
             {!textState.isTyping && !textState.isDone && (
-              <span>ready</span>
+              <span>{readyMessage}</span>
             )}
             
             {textState.isDone && (
-              <span>end of transmission</span>
+              <span>{endMessage}</span>
             )}
           </div>
         </div>
