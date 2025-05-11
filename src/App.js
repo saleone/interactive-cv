@@ -1,6 +1,7 @@
 import DisclaimerSlide from './slides/Disclaimer';
 import SlideController from './SlideController';
 import AlbumSlide from './slides/Album';
+import MatrixTerminalSlide from './slides/MatrixTerminal';
 
 /* Entrypoint component to the React application */
 function App() {
@@ -15,7 +16,8 @@ function App() {
       <SlideController>
         <DisclaimerSlide/>
         <AlbumSlide/>
-        <h1>Works</h1>
+        <MatrixTerminalSlide/>
+        <h1>Thank you!</h1>
       </SlideController>
     </div>
   );
