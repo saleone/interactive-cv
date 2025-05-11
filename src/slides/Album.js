@@ -8,69 +8,58 @@ export default function AlbumSlide() {
   const [isComplete, setIsComplete] = useState(false);
   const containerRef = useRef(null);
   
+  // Function to generate random position and rotation for a photo
+  const generatePhotoPosition = () => {
+    return {
+      rotation: Math.random() * 40 - 20, // -20 to +20 degrees
+      xOffset: Math.random() * 80 - 40,  // -40 to +40 pixels
+      yOffset: Math.random() * 60 - 30,  // -30 to +30 pixels
+    };
+  };
+  
+  // Photo data without positioning information
   const photos = [
     {
       id: 1,
       imageUrl: "https://picsum.photos/seed/nature/300/300",
       caption: "Summer vacation 2023",
       width: 264,
-      rotation: Math.random() * 30 - 15,
-      xOffset: Math.random() * 40 - 20,
-      yOffset: Math.random() * 20 - 10,
     },
     {
       id: 2,
       imageUrl: "https://picsum.photos/seed/beach/300/300",
       caption: "Beach memories",
       width: 220,
-      rotation: Math.random() * 30 - 15,
-      xOffset: Math.random() * 40 - 20,
-      yOffset: Math.random() * 20 - 10,
     },
     {
       id: 3,
       imageUrl: "https://picsum.photos/seed/mountain/300/300",
       caption: "Mountain trip",
       width: 176,
-      rotation: Math.random() * 30 - 15,
-      xOffset: Math.random() * 40 - 20,
-      yOffset: Math.random() * 20 - 10,
     },
     {
       id: 4,
       imageUrl: "https://picsum.photos/seed/city/300/300",
       caption: "City exploration",
       width: 240,
-      rotation: Math.random() * 30 - 15,
-      xOffset: Math.random() * 40 - 20,
-      yOffset: Math.random() * 20 - 10,
     },
     {
       id: 5,
       imageUrl: "https://picsum.photos/seed/sunset/300/300",
       caption: "Sunset at the lake",
       width: 200,
-      rotation: Math.random() * 30 - 15,
-      xOffset: Math.random() * 40 - 20,
-      yOffset: Math.random() * 20 - 10,
     },
     {
       id: 6,
       imageUrl: "https://picsum.photos/seed/friends/300/300",
       caption: "Friends gathering",
       width: 250,
-      rotation: Math.random() * 30 - 15,
-      xOffset: Math.random() * 40 - 20,
-      yOffset: Math.random() * 20 - 10,
     },
     {
       id: 7,
       imageUrl: "https://picsum.photos/seed/food/300/300",
       caption: "Delicious dinner",
       width: 190,
-      rotation: Math.random() * 30 - 15,
-      xOffset: Math.random() * 40 - 20,
-      yOffset: Math.random() * 20 - 10,
     }
   ];
 
@@ -79,7 +68,11 @@ export default function AlbumSlide() {
     
     if (visiblePhotos.length < photos.length) {
       const nextPhotoIndex = visiblePhotos.length;
-      setVisiblePhotos(prev => [...prev, photos[nextPhotoIndex]]);
+      const nextPhoto = {
+        ...photos[nextPhotoIndex],
+        ...generatePhotoPosition()
+      };
+      setVisiblePhotos(prev => [...prev, nextPhoto]);
     } else if (isComplete) {
       goToNextSlide();
     }
@@ -102,7 +95,7 @@ export default function AlbumSlide() {
       onClick={handleClick}
       ref={containerRef}
     >
-      <div className="relative w-[500px] h-[500px]">
+      <div className="relative w-[600px] h-[600px]">
         {visiblePhotos.map((photo, index) => (
           <div
             key={photo.id}
