@@ -45,48 +45,148 @@ export const albumPhotos = [
 ];
 
 export const terminalTexts = [
-// `
-// INTRO
-// * First major project when I was 16.
-// * Topic: Website builder - 20k active users / 70M daily page views
-// * Task: Create blog and forum from scratch and integrated with the build and userbase. 
-// * Tech: LAMP stack with CodeIgniter.
-// * Status: SUCCESS 
-// ~
-// ~
-// ~
-// `,
-//
-// `
-// EDUCATION
-// * Location: Faculty of Mechanical Engineering, Banja Luka
-// * Topic: Mechatronics, Robotics and Control Systems
-// * Task: Learn how the world functions
-// * Tech: Maths, Physics, Python, and the all that but mostly Blood, Sweat and Tears
-// * Status: GRADUATED
-// `,
-//
-// `
-// WORK EXPERIENCE - Phase 1
-// * Employer: RT-RK Institute - (TTTech, Audi, Magnete Marelli, Magna, SAIC, VW, BMW, etc.)
-// * Topic: Automotive Software Dev Lifecycle Management Tool
-// * Task: Build, Manage and Evangelise
-// * Tech: .NET (C#, WPF, ASP.NET), Python, Jenkins
-// * Results: Successfully implemented. Actively used internally. Started evolving into a product offering. Became TTTech MotionWise Creator.  
-// ~
-// `,
-
-
 `
-WORK EXPERIENCE - Phase 2
-* Employer: Flashboys - (Wizzle)
-* Topic: Full featured Blockchain Bank
-* Task: Build 
-* Tech: .NET (C#, .NET Core), Azure, Python, Vue.js
-* Results: 
-* ~
+INTRO
+* First major project when I was 16.
+* Topic: Website builder - 20k active users / 70M daily page views
+* Task: Create blog and forum from scratch and integrated with the build and userbase. 
+* Tech: LAMP stack with CodeIgniter.
+* Status: SUCCESS 
+~
+~
+~
 `,
 
+`
+EDUCATION
+* Location: Faculty of Mechanical Engineering, Banja Luka
+* Topic: Mechatronics, Robotics and Control Systems
+* Task: Learn how the world functions
+* Tech: Maths, Physics, Python, and the rest, but mostly Blood, Sweat, and Tears
+* Status: GRADUATED
+~
+~
+~
+~
+`,
 
-  "INTERRUPT: Project Report Ready - Virtual Trading Platform / Data Platform. Switch to the project session."
+`
+WORK EXPERIENCE - Page 1 / 3
+* Employer: RT-RK Institute - (TTTech, Audi, Magnete Marelli, Magna, SAIC, VW, BMW, etc.)
+* Topic: Automotive Software Dev Lifecycle Management Tool
+* Task: Build the product, manage tech and team, improve product adoption
+* Tech: .NET (C#, WPF, ASP.NET), Python, Jenkins
+* Results: Successfully implemented. Actively used internally. Started evolving into a product offering. Became TTTech MotionWise Creator
+~
+`,
+
+`
+WORK EXPERIENCE - Page 2 / 3
+* Employer: Flashboys - (Wizzle)
+* Topic: Full featured Blockchain Bank
+* Task: Build the product, improve processes and train the team, ensure delivery and quality
+* Tech: .NET (C#, .NET Core), Azure, Typescript, Javascript, Python, Vue.js, React Native
+* Results: Multiple successful ICOs (10+M$). Implemented key banking interfaces (ATM, POS terminal, Online Merchant interface and APIs
+~
+`,
+
+`
+WORK EXPERIENCE - Page 3 / 3
+* Employer: Comtrade Digital Services > Endava > Stem Inc
+* Topic: Fully-featured battery management system
+* Task: Design, plan and manage implementation of diverse set of microservices and apps
+* Tech: Python, AWS, Javascript, React, Java
+* Results: Contributed to and owned a diverse set microservices including external data import and processing, core data access services, internal and external data access providers, ACLs, performance reporting, NOC, wholesale market participation and others
+` , 
+
+`
+<SIGINT>
+Type: Project Report Ready 
+Topic: Virtual Trading Platform Data Platform.
+Action: Switch to the session.
+~
+~
+~
+~
+~
+~
+~
+`
 ].map((v) => v.trim());
+
+export const projectPresentation = [
+// `
+// VIRTUAL ENERGY TRADER - Page 1 / n
+// * no hardware and controls
+// * no clients
+// * operates in DA and RT only
+// * buy in DA, sell in RT (long)
+// * sell in DA, buy in RT (short)
+// * profit = difference - fees
+// * rince and repeat
+// ~
+// ~
+// ~
+// `
+
+
+// `
+// VIRTUAL ENERGY TRADER - 2 / n
+// * price and load forecasting
+// * trade & bankroll throughput optimization
+// * market integrations (apis, file sharing, hooks and signals)
+// * data, data, and data
+// ~ 
+// ~
+// ~
+// ~
+// ~
+  
+// `
+// VIRTUAL ENERGY TRADER - 3 / n
+// Data platform
+// * in service of engineers and the rest of staff
+// * provide consistent and intuitive access to data
+// * all of data (external, internal, generated)
+// * keywords: auth, schemas, APIs, tiers, timelines, latency, availability, observability, ... 
+// ~
+// ~
+// ~
+// ~
+// ~
+// `
+
+// `
+// lack of control ; dependance on others ; thorny paths
+// inconsistencies ; poor quality ; bad actors
+// missing data ; bad communication ; limits ; regulations 
+// ------------------------
+// buffer zone
+// ------------------------
+// deterministic environment ; internal dependencies
+// managed limitations ; structure ; insights
+// ~
+// ~
+// ~
+// ~
+// `,
+
+`
+................. [vendor] [vendor][vendor]
+_____________________^_____________
+.....................|
+stores:      workers:
+| blob |         |1||3|
+| hot  |         |2||4|
+| warm |
+| cold |
+~
+~
+~
+~
+~
+`
+
+
+].map((v) => v.trim());
+

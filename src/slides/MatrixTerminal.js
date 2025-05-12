@@ -138,7 +138,7 @@ export default function MatrixTerminalSlide({
             // No auto-advance to next text - require user interaction
           }, 100);
         }
-      }, 50 * i);
+      }, 30 * i);
       
       timers.push(timer);
     }

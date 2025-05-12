@@ -3,7 +3,7 @@ import AlbumSlide from './slides/Album';
 import MatrixTerminalSlide from './slides/MatrixTerminal';
 import TransitionSlide from './slides/TransitionSlide';
 
-import { albumPhotos, terminalTexts } from './data';
+import { albumPhotos, terminalTexts, projectPresentation } from './data';
 
 /* Entrypoint component to the React application */
 function App() {
@@ -19,7 +19,7 @@ function App() {
       <SlideController>
         <h1 className="text-6xl m-12 overline decoration-double">Disclaimer</h1>
         <TransitionSlide 
-          colorClasses={['bg-white dark:bg-black', 'bg-white dark:bg-white']}
+          colorClasses={['bg-white dark:bg-black', 'bg-white dark:bg-white', 'bg-white dark:bg-black', 'bg-white dark:bg-white']}
           settleTime={800}
           initialFlickerSpeed={25}
         />
@@ -29,13 +29,13 @@ function App() {
           continueMessage="Photo ready."
         />
         <TransitionSlide 
-          colorClasses={['bg-white dark:bg-black', 'bg-black', 'bg-green-500', 'bg-black', 'bg-green-500', 'bg-black']}
-          settleTime={800}
+          colorClasses={['bg-white dark:bg-black', 'bg-green-500', 'bg-black', 'bg-green-500', 'bg-black', 'bg-green-500']}
+          settleTime={1500}
           initialFlickerSpeed={25}
         />
         <MatrixTerminalSlide 
           careerTexts={terminalTexts}
-          terminalUser="sasa@portfolio.savic.ba"
+          terminalUser="sasa@career.savic.ba"
           streamingMessage="streaming..."
           readyMessage="ready"
           endMessage="end of transmission"
@@ -46,7 +46,7 @@ function App() {
           initialFlickerSpeed={50}
         />
         <MatrixTerminalSlide 
-          careerTexts={terminalTexts}
+          careerTexts={projectPresentation}
           terminalUser="sasa@virt-trade.savic.ba"
           streamingMessage="streaming..."
           readyMessage="ready"
