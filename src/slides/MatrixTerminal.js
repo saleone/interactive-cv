@@ -209,7 +209,7 @@ export default function MatrixTerminalSlide({
             <div className="text-xs text-green-400">{terminalUser}</div>
           </div>
           
-          <div className="text-xl min-h-[20rem] whitespace-pre-line">
+          <div className="text-xl min-h-[20rem] whitespace-pre">
             {textState.displayedText}
             <span className={`inline-block w-3 h-5 bg-green-500 ml-1 ${textState.isTyping ? 'animate-pulse' : 'opacity-0'}`}></span>
           </div>
