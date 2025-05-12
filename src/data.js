@@ -2,46 +2,82 @@
 export const albumPhotos = [
   {
     id: 1,
-    imageUrl: "https://picsum.photos/seed/nature/300/300",
-    caption: "Summer vacation 2023",
-    width: 320,
-  },
-  {
-    id: 2,
-    imageUrl: "https://picsum.photos/seed/beach/300/300",
-    caption: "Beach memories",
-    width: 440,
-  },
-  {
-    id: 3,
-    imageUrl: "https://picsum.photos/seed/mountain/300/300",
-    caption: "Mountain trip",
-    width: 360,
-  },
-  {
-    id: 4,
-    imageUrl: "https://picsum.photos/seed/city/300/300",
-    caption: "City exploration",
-    width: 480,
-  },
-  {
-    id: 5,
-    imageUrl: "https://picsum.photos/seed/sunset/300/300",
-    caption: "Sunset at the lake",
+    imageUrl: "/pics/money.jpg",
+    caption: "This is our dog. Who would have thought that he's 11 years old?",
     width: 400,
   },
   {
+    id: 2,
+    imageUrl: "/pics/cat.jpg",
+    caption: "We have a little lion. He's a bit smaller thought.",
+    width: 420,
+  },
+  {
+    id: 3,
+    imageUrl: "/pics/cat_wig.jpg",
+    caption: "Cat is usually annoyed with things like this. But he tolerated us for this.",
+    width: 380,
+  },
+  {
+    id: 4,
+    imageUrl: "/pics/dog.jpg",
+    caption: "The last dog we fostered. We found him home in Switzerland in the valleys beneath of Alps.",
+    width: 400,
+  },
+  {
+    id: 5,
+    imageUrl: "/pics/jez.jpg",
+    caption: "We try to rescue every animal we can.",
+    width: 380,
+  },
+  {
     id: 6,
-    imageUrl: "https://picsum.photos/seed/friends/300/300",
-    caption: "Friends gathering",
-    width: 500,
+    imageUrl: "/pics/snowboard.jpg",
+    caption: "We like snow and the mountain. This is Val Thorens, it was beautiful. I ski and snowboard.",
+    width: 450,
   },
   {
     id: 7,
-    imageUrl: "https://picsum.photos/seed/food/300/300",
-    caption: "Delicious dinner",
+    imageUrl: "/pics/run.jpg",
+    caption: "Movement is essential and running is the easiest way to get it.",
+    width: 420,
+  },
+  {
+    id: 8,
+    imageUrl: "/pics/bike.jpg",
+    caption: "Riding when the road is closed for you in a scenery like this is awesome.",
+    width: 450,
+  },
+  {
+    id: 9,
+    imageUrl: "/pics/bike_2.jpg",
+    caption: "Fastest way to move around. I prefer bikes that are efficient on every type of road.",
+    width: 420,
+  },
+  {
+    id: 10,
+    imageUrl: "/pics/swim.jpg",
+    caption: "Swimming in open water is my favorite.",
     width: 380,
-  }
+  },
+  {
+    id: 11,
+    imageUrl: "/pics/hike.jpg",
+    caption: "Hike and Code with a beautiful view of our canyon.",
+    width: 400,
+  },
+  {
+    id: 12,
+    imageUrl: "/pics/fly2.jpg",
+    caption: "Once you try, you will never stop.",
+    width: 380,
+  },
+  {
+    id: 13,
+    imageUrl: "/pics/fly.jpg",
+    caption: "One of the coolest ways to feel freedom we have.",
+    width: 400,
+  },
 ];
 
 export const terminalTexts = [
