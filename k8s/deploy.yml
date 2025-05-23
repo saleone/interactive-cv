@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: powerline-slides
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: powerline-slides
+  template:
+    metadata:
+      labels:
+        app: powerline-slides
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: powerline-slides
+        image: docker.io/donsaleone/private:powerline-presentation
+        ports:
+        - containerPort: 80

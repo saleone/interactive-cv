@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: powerline-slides-ing
+  # annotations:
+  #   traefik.ingress.kubernetes.io/router.entrypoints: web
+spec:
+  rules:
+  - host: homelab.savic.one
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: powerline-slides-svc
+            port:
+              number: 8080
